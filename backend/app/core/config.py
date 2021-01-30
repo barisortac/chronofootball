@@ -1,0 +1,23 @@
+import os
+from environs import Env
+
+env = Env()
+# Read .env into os.environ
+env.read_env()
+
+PROJECT_NAME = "chrono-football"
+
+POSTGRES_SERVER = os.getenv("POSTGRES_SERVER")
+POSTGRES_USER = os.getenv("POSTGRES_USER")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+POSTGRES_DB = os.getenv("POSTGRES_DB")
+POSTGRES_PORT = os.getenv("POSTGRES_PORT")
+POSTGRES_USER_OWNER = os.getenv("POSTGRES_USER_OWNER")
+POSTGRES_PASSWORD_OWNER = os.getenv("POSTGRES_PASSWORD_OWNER")
+
+
+DATABASE_URI = SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL", f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}")
+
+BACKEND_CORS_ORIGINS = "*"
+
+API_V1_STR = "/api/v1"
