@@ -1,4 +1,4 @@
-This project is forked from 
+This project is forked from https://github.com/Buuntu/fastapi-react.
 
 # chrono-football
 It is a proof-of-concept game that reminds me a childhood game that we play with chronometers on our watch.
